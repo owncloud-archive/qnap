@@ -1,6 +1,6 @@
 ---
 repository:
-  name: qnap-container
+  name: qnap
   description: Docker ownCloud image for qnap
   topics: docker, owncloud, qnap
 
