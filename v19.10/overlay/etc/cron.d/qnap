@@ -1,0 +1,1 @@
+*/1  *  *  *  * www-data /bin/bash -c "occ qnap:check-active-users"
