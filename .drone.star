@@ -548,6 +548,7 @@ def sleep(config):
     ],
   }]
 
+# container vulnerability scanning, see: https://github.com/aquasecurity/trivy
 def trivy(config):
   if config['arch'] != 'amd64':
     return []
