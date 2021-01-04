@@ -10,7 +10,7 @@ This is a custom image is used within our QNAP package, please don't use this as
 [Docker Hub](https://hub.docker.com/r/owncloud/qnap/tags)
 
 * `latest` available as `owncloud/qnap:latest`
-* `10.4.1` available as `owncloud/qnap:10.4.1`, `owncloud/qnap:10.4`,  `owncloud/qnap:10`
+* `10.6.0` available as `owncloud/qnap:10.4.1`, `owncloud/qnap:10.6`,  `owncloud/qnap:10`
 
 ## Volumes
 
