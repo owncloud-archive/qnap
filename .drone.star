@@ -1,21 +1,22 @@
 def main(ctx):
+  # follow versions from here: https://github.com/owncloud-docker/server/blob/master/.drone.star
   versions = [
     {
-      'value': '10.4.1',
-      'qa': 'https://download.owncloud.org/community/owncloud-10.4.1-qa.tar.bz2',
-      'tarball': 'https://download.owncloud.org/community/owncloud-10.4.1.tar.bz2',
-      'tarball_sha': '63f32048225c6bc4534c6757e8beee65fc845a35126899e85d787a3ba4073d48',
+      'value': '10.6.0',
+      'qa': 'https://download.owncloud.org/community/testing/owncloud-complete-20201216-qa.tar.bz2',
+      'tarball': 'https://download.owncloud.org/community/owncloud-10.6.0.tar.bz2',
+      'tarball_sha': 'e50f88fe50a30f0251ebb315476d0f142127457878e7fd081be68ed23a556a4a',
       'qnap': 'https://github.com/owncloud/qnap/releases/download/v1.0.0/qnap.tar.gz',
       'qnap_sha': 'd06fc2aa1e3f9191f1684fe3647e88d3297cd1316d6306e9a1893780cac842e1',
-      'php': '7.3',
-      'base': 'v19.10',
-      'tags': ['10.4', '10'],
+      'php': '7.4',
+      'base': 'v20.04',
+      'tags': ['10.6', '10'],
     },
   ]
 
   arches = [
     'amd64',
-    'arm32v7',
+    #'arm32v7', #TODO: enable when owncloud/base:20.04-arm32v7 is available
     'arm64v8',
   ]
 
