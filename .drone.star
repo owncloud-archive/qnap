@@ -23,7 +23,7 @@ def main(ctx):
   config = {
     'version': None,
     'arch': None,
-    'split': 5,
+    'split': 10,
     'downstream': [
 
     ],
