@@ -9,14 +9,14 @@ def main(ctx):
       'qnap': 'https://github.com/owncloud/qnap/releases/download/v1.0.0/qnap.tar.gz',
       'qnap_sha': 'd06fc2aa1e3f9191f1684fe3647e88d3297cd1316d6306e9a1893780cac842e1',
       'php': '7.4',
-      'base': 'v20.04',
+      'base': 'v18.04',
       'tags': ['10.6', '10'],
     },
   ]
 
   arches = [
     'amd64',
-    #'arm32v7', #TODO: enable when owncloud/base:20.04-arm32v7 is available
+    'arm32v7',
     'arm64v8',
   ]
 
