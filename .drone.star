@@ -85,7 +85,7 @@ def docker(config):
       'os': 'linux',
       'arch': config['platform'],
     },
-    'steps': tarball(config) + qnap(config) + theme-qnap(config) + prepublish(config) + sleep(config) + trivy(config),
+    'steps': tarball(config) + qnap(config) + themeQnap(config) + prepublish(config) + sleep(config) + trivy(config),
     'depends_on': [],
     'trigger': {
       'ref': [
@@ -128,7 +128,7 @@ def docker(config):
       'os': 'linux',
       'arch': config['platform'],
     },
-    'steps': tarball(config) + qnap(config) + theme-qnap(config) + publish(config),
+    'steps': tarball(config) + qnap(config) + themeQnap(config) + publish(config),
     'depends_on': [],
     'trigger': {
       'ref': [
@@ -512,14 +512,14 @@ def qnap(config):
     },
   }]
 
-def theme-qnap(config):
+def themeQnap(config):
   return [{
     'name': 'theme-qnap',
     'image': 'plugins/download',
     'pull': 'always',
     'settings': {
-      'source': config['version']['theme-qnap'],
-      'sha256': config['version']['theme-qnap_sha'],
+      'source': config['version']['theme_qnap'],
+      'sha256': config['version']['theme_qnap_sha'],
       'destination': '%s/theme-qnap.tar.gz' % config['version']['base'],
     },
   }]
