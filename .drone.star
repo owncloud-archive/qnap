@@ -6,8 +6,10 @@ def main(ctx):
       'qa': 'https://download.owncloud.org/community/testing/owncloud-complete-20201216-qa.tar.bz2',
       'tarball': 'https://download.owncloud.org/community/owncloud-10.6.0.tar.bz2',
       'tarball_sha': 'e50f88fe50a30f0251ebb315476d0f142127457878e7fd081be68ed23a556a4a',
-      'qnap': 'https://github.com/owncloud/qnap/releases/download/v1.0.0/qnap.tar.gz',
-      'qnap_sha': 'd06fc2aa1e3f9191f1684fe3647e88d3297cd1316d6306e9a1893780cac842e1',
+      'qnap': 'https://github.com/owncloud/qnap/releases/download/v1.1.0/qnap.tar.gz',
+      'qnap_sha': 'f0b0741c9c6db00d92342da672925fd8ab460f037800f96c78d05be71dbb5b1c',
+      'theme_qnap': 'https://github.com/owncloud/theme-qnap/releases/download/v0.1.0-rc1/theme-qnap.tar.gz',
+      'theme_qnap_sha': '169553d6bfd00c36fa7fa923aecf0a74270f021df06590824d58c5a2519f414c',
       'php': '7.4',
       'base': 'v20.04',
       'tags': ['10.6', '10'],
@@ -83,7 +85,7 @@ def docker(config):
       'os': 'linux',
       'arch': config['platform'],
     },
-    'steps': tarball(config) + qnap(config) + prepublish(config) + sleep(config) + trivy(config),
+    'steps': tarball(config) + qnap(config) + themeQnap(config) + prepublish(config) + sleep(config) + trivy(config),
     'depends_on': [],
     'trigger': {
       'ref': [
@@ -126,7 +128,7 @@ def docker(config):
       'os': 'linux',
       'arch': config['platform'],
     },
-    'steps': tarball(config) + qnap(config) + publish(config),
+    'steps': tarball(config) + qnap(config) + themeQnap(config) + publish(config),
     'depends_on': [],
     'trigger': {
       'ref': [
@@ -507,6 +509,18 @@ def qnap(config):
       'source': config['version']['qnap'],
       'sha256': config['version']['qnap_sha'],
       'destination': '%s/qnap.tar.gz' % config['version']['base'],
+    },
+  }]
+
+def themeQnap(config):
+  return [{
+    'name': 'theme-qnap',
+    'image': 'plugins/download',
+    'pull': 'always',
+    'settings': {
+      'source': config['version']['theme_qnap'],
+      'sha256': config['version']['theme_qnap_sha'],
+      'destination': '%s/theme-qnap.tar.gz' % config['version']['base'],
     },
   }]
 

@@ -19,6 +19,9 @@ RUN apt-get update -y && \
 
 ADD owncloud.tar.bz2 /var/www/
 ADD qnap.tar.gz /var/www/owncloud/apps/
+ADD theme-qnap.tar.gz /var/www/owncloud/apps/
+
+RUN tree -L 1 /var/www/owncloud/apps/
 
 COPY ./overlay /
 WORKDIR /var/www/owncloud
