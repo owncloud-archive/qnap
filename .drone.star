@@ -8,6 +8,8 @@ def main(ctx):
       'tarball_sha': 'e50f88fe50a30f0251ebb315476d0f142127457878e7fd081be68ed23a556a4a',
       'qnap': 'https://github.com/owncloud/qnap/releases/download/v1.0.0/qnap.tar.gz',
       'qnap_sha': 'd06fc2aa1e3f9191f1684fe3647e88d3297cd1316d6306e9a1893780cac842e1',
+      'theme_qnap': 'https://github.com/owncloud/theme-qnap/releases/download/v0.0.0/theme-qnap.tar.gz',
+      'theme_qnap_sha': 'f10a4034daaa85413352296ec97a26709fac9c059e6bc7e10b98833d326c83d7',
       'php': '7.4',
       'base': 'v20.04',
       'tags': ['10.6', '10'],
@@ -83,7 +85,7 @@ def docker(config):
       'os': 'linux',
       'arch': config['platform'],
     },
-    'steps': tarball(config) + qnap(config) + prepublish(config) + sleep(config) + trivy(config),
+    'steps': tarball(config) + qnap(config) + theme-qnap(config) + prepublish(config) + sleep(config) + trivy(config),
     'depends_on': [],
     'trigger': {
       'ref': [
@@ -126,7 +128,7 @@ def docker(config):
       'os': 'linux',
       'arch': config['platform'],
     },
-    'steps': tarball(config) + qnap(config) + publish(config),
+    'steps': tarball(config) + qnap(config) + theme-qnap(config) + publish(config),
     'depends_on': [],
     'trigger': {
       'ref': [
@@ -507,6 +509,18 @@ def qnap(config):
       'source': config['version']['qnap'],
       'sha256': config['version']['qnap_sha'],
       'destination': '%s/qnap.tar.gz' % config['version']['base'],
+    },
+  }]
+
+def theme-qnap(config):
+  return [{
+    'name': 'theme-qnap',
+    'image': 'plugins/download',
+    'pull': 'always',
+    'settings': {
+      'source': config['version']['theme-qnap'],
+      'sha256': config['version']['theme-qnap_sha'],
+      'destination': '%s/theme-qnap.tar.gz' % config['version']['base'],
     },
   }]
 
