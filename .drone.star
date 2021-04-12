@@ -12,7 +12,20 @@ def main(ctx):
       'theme_qnap_sha': '169553d6bfd00c36fa7fa923aecf0a74270f021df06590824d58c5a2519f414c',
       'php': '7.4',
       'base': 'v20.04',
-      'tags': ['10.6', '10'],
+      'tags': ['10.6'],
+    },
+    {
+      'value': '10.7.0',
+      'qa': 'https://download.owncloud.org/community/testing/owncloud-complete-20210326-qa.tar.bz2',
+      'tarball': 'https://download.owncloud.org/community/owncloud-10.7.0.tar.bz2',
+      'tarball_sha': '7e417c135544d2bb980f6e514f48f5892b8c0409e7309242526c6755884001ba',
+      'qnap': 'https://github.com/owncloud/qnap/releases/download/v1.1.0/qnap.tar.gz',
+      'qnap_sha': 'f0b0741c9c6db00d92342da672925fd8ab460f037800f96c78d05be71dbb5b1c',
+      'theme_qnap': 'https://github.com/owncloud/theme-qnap/releases/download/v0.1.0-rc1/theme-qnap.tar.gz',
+      'theme_qnap_sha': '169553d6bfd00c36fa7fa923aecf0a74270f021df06590824d58c5a2519f414c',
+      'php': '7.4',
+      'base': 'v20.04',
+      'tags': ['10.7', '10'],
     },
   ]
 
