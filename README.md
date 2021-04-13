@@ -6,7 +6,7 @@
 [![Source: GitHub](https://img.shields.io/badge/source-github-blue.svg?logo=github&logoColor=white)](https://github.com/owncloud-docker/qnap)
 [![License: MIT](https://img.shields.io/github/license/owncloud-docker/qnap)](https://github.com/owncloud-docker/qnap/blob/master/LICENSE)
 
-This is a custom image is used within our QNAP package, please don't use this as a regular Docker container!
+Custom ownCloud Docker image used within our QNAP package, please don't use this as a regular Docker container!
 
 ## Quick reference
 
