@@ -4,8 +4,8 @@ def main(ctx):
         {
             "value": "10.6.0",
             "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20201216-qa.tar.bz2",
-            "tarball": "https://download.owncloud.org/community/owncloud-10.6.0.tar.bz2",
-            "tarball_sha": "e50f88fe50a30f0251ebb315476d0f142127457878e7fd081be68ed23a556a4a",
+            "tarball": "https://download.owncloud.org/community/owncloud-complete-20201216.tar.bz2",
+            "tarball_sha": "a5506e1fc7abd7634dc3daaf005a4ccd0151a63c9f23aa979efebefaeb40e79c",
             "qnap": "https://github.com/owncloud/qnap/releases/download/v1.2.0/qnap.tar.gz",
             "qnap_sha": "c1f80ad65660ee04f57405ff1b5f3a8b5e17a7234ff1147a116b8112ea48602c",
             "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0-rc2/theme-qnap.tar.gz",
@@ -17,8 +17,8 @@ def main(ctx):
         {
             "value": "10.7.0",
             "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20210326-qa.tar.bz2",
-            "tarball": "https://download.owncloud.org/community/owncloud-10.7.0.tar.bz2",
-            "tarball_sha": "7e417c135544d2bb980f6e514f48f5892b8c0409e7309242526c6755884001ba",
+            "tarball": "https://download.owncloud.org/community/owncloud-complete-20210326.tar.bz2",
+            "tarball_sha": "a5506e1fc7abd7634dc3daaf005a4ccd0151a63c9f23aa979efebefaeb40e79c",
             "qnap": "https://github.com/owncloud/qnap/releases/download/v1.2.0/qnap.tar.gz",
             "qnap_sha": "c1f80ad65660ee04f57405ff1b5f3a8b5e17a7234ff1147a116b8112ea48602c",
             "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0-rc2/theme-qnap.tar.gz",
