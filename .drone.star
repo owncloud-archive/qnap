@@ -20,7 +20,7 @@ def main(ctx):
             "tarball": "https://download.owncloud.org/community/owncloud-complete-20210326.tar.bz2",
             "tarball_sha": "a5506e1fc7abd7634dc3daaf005a4ccd0151a63c9f23aa979efebefaeb40e79c",
             "qnap": "https://github.com/owncloud/qnap/releases/download/v1.2.0/qnap.tar.gz",
-            "qnap_sha": "a5506e1fc7abd7634dc3daaf005a4ccd0151a63c9f23aa979efebefaeb40e79c",
+            "qnap_sha": "c1f80ad65660ee04f57405ff1b5f3a8b5e17a7234ff1147a116b8112ea48602c",
             "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0-rc2/theme-qnap.tar.gz",
             "theme_qnap_sha": "de71a639ea4a41af09f28df7d1204afdcd6dc835e0eafb4643e85f78818a5254",
             "php": "7.4",
