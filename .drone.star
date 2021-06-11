@@ -39,7 +39,6 @@ def main(ctx):
         "version": None,
         "arch": None,
         "split": 10,
-        "downstream": [],
         "description": "ownCloud image for QNAP",
         "repo": ctx.repo.name,
     }
@@ -79,7 +78,7 @@ def main(ctx):
         inner.append(m)
         stages.extend(inner)
 
-    after = downstream(config) + [
+    after = [
         documentation(config),
         rocketchat(config),
     ]
@@ -383,45 +382,6 @@ def manifest(config):
             ],
         },
     }
-
-def downstream(config):
-    if len(config["downstream"]) == 0:
-        return []
-
-    return [{
-        "kind": "pipeline",
-        "type": "docker",
-        "name": "downstream",
-        "platform": {
-            "os": "linux",
-            "arch": "amd64",
-        },
-        "clone": {
-            "disable": True,
-        },
-        "steps": [
-            {
-                "name": "notify",
-                "image": "plugins/downstream",
-                "pull": "always",
-                "failure": "ignore",
-                "settings": {
-                    "token": {
-                        "from_secret": "drone_token",
-                    },
-                    "server": "https://drone.owncloud.com",
-                    "repositories": config["downstream"],
-                },
-            },
-        ],
-        "depends_on": [],
-        "trigger": {
-            "ref": [
-                "refs/heads/master",
-                "refs/tags/**",
-            ],
-        },
-    }]
 
 def documentation(config):
     return {
