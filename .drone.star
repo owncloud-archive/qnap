@@ -2,17 +2,17 @@ def main(ctx):
     # follow versions from here: https://github.com/owncloud-docker/server/blob/master/.drone.star
     versions = [
         {
-            "value": "10.8.0-beta2",
-            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20210705-qa.tar.bz2",
-            "tarball": "https://download.owncloud.org/community/testing/owncloud-complete-20210705.tar.bz2",
-            "tarball_sha": "e7e71cb74eb91a9b2996d7433cf654f214da73dfac0ac39aa4cf5d5c4d57a986",
-            "qnap": "https://github.com/owncloud/qnap/releases/download/v1.3.0/qnap.tar.gz",
-            "qnap_sha": "c5d9fe8d2406a3246a14d649a9617f7133bfa4c79aad8fd15e6dc3f6c770cde7",
+            "value": "10.8.0-rc1",
+            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20210715-qa.tar.bz2",
+            "tarball": "https://download.owncloud.org/community/testing/owncloud-complete-20210715.tar.bz2",
+            "tarball_sha": "e4a9b17cb19bcc37a31ac3e5143d61e8875c24c3df5149972026d5a148566f42",
+            "qnap": "https://github.com/owncloud/qnap/releases/download/v1.4.0/qnap.tar.gz",
+            "qnap_sha": "3441f86ccb598fa044ca5c08a827bf3fcdf6e37e2adc6ce433da52c7e5837c3f",
             "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0-rc4/theme-qnap.tar.gz",
             "theme_qnap_sha": "9c705e883accac368266f405a7162331fe263fb869e111f9aaf8541bf0e023b5",
             "php": "7.4",
             "base": "v20.04",
-            "tags": ["10.8-beta2"],
+            "tags": ["10.8-rc1"],
         },
     ]
 
