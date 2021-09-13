@@ -16,6 +16,7 @@ CMD ["/usr/bin/owncloud", "server"]
 ADD owncloud.tar.bz2 /var/www/
 ADD qnap.tar.gz /var/www/owncloud/apps/
 ADD theme-qnap.tar.gz /var/www/owncloud/apps/
+ADD ["https://doc.owncloud.com/pdf/server/10.8_ownCloud_Admin_Manual.pdf", "/var/www/owncloud/core/skeleton/ownCloud Manual.pdf"]
 
 COPY ./overlay /
 WORKDIR /var/www/owncloud
