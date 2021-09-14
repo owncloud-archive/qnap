@@ -13,6 +13,7 @@ def main(ctx):
             "php": "7.4",
             "base": "v20.04",
             "tags": ["10.8", "10.8.0"],
+            "doc_version": "10.8",
         },
     ]
 
@@ -504,6 +505,9 @@ def prepublish(config):
         "name": "prepublish",
         "image": "plugins/docker",
         "pull": "always",
+        "environment": {
+            "DOC_VERSION": config["version"]["doc_version"],
+        },
         "settings": {
             "username": {
                 "from_secret": "internal_username",
@@ -517,6 +521,9 @@ def prepublish(config):
             "registry": "registry.drone.owncloud.com",
             "context": config["version"]["base"],
             "purge": False,
+            "build_args_from_env": [
+                "DOC_VERSION",
+            ],
         },
     }]
 
@@ -730,6 +737,9 @@ def publish(config):
         "name": "publish",
         "image": "plugins/docker",
         "pull": "always",
+        "environment": {
+            "DOC_VERSION": config["version"]["doc_version"],
+        },
         "settings": {
             "username": {
                 "from_secret": "public_username",
@@ -743,6 +753,9 @@ def publish(config):
             "context": config["version"]["base"],
             "cache_from": "registry.drone.owncloud.com/owncloud/%s:%s" % (config["repo"], config["internal"]),
             "pull_image": False,
+            "build_args_from_env": [
+                "DOC_VERSION",
+            ],
         },
         "when": {
             "ref": [
