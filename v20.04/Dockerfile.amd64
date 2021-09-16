@@ -1,5 +1,8 @@
 FROM owncloud/base:20.04-amd64@sha256:227c42147513a6ee41d887d7a7e87a8f9e562f72f5f3071f76f30f5f3a592e1c
 
+ARG DOC_VERSION
+ENV DOC_VERSION ${DOC_VERSION}
+
 LABEL maintainer="ownCloud GmbH <devops@owncloud.com>" \
   org.opencontainers.image.authors="ownCloud DevOps <devops@owncloud.com>" \
   org.opencontainers.image.title="ownCloud QNAP" \
@@ -16,6 +19,9 @@ CMD ["/usr/bin/owncloud", "server"]
 ADD owncloud.tar.bz2 /var/www/
 ADD qnap.tar.gz /var/www/owncloud/apps/
 ADD theme-qnap.tar.gz /var/www/owncloud/apps/
+RUN rm '/var/www/owncloud/core/skeleton/ownCloud Manual.pdf'
+ADD ["https://doc.owncloud.com/pdf/server/10.8_ownCloud_Admin_Manual.pdf", "/var/www/owncloud/core/skeleton/10.8_ownCloud_Admin_Manual.pdf"]
+ADD ["https://doc.owncloud.com/pdf/server/10.8_ownCloud_User_Manual.pdf", "/var/www/owncloud/core/skeleton/10.8_ownCloud_User_Manual.pdf"]
 
 COPY ./overlay /
 WORKDIR /var/www/owncloud
