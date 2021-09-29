@@ -1,6 +1,6 @@
 FROM owncloud/base:20.04-arm32v7@sha256:dcd0e514ad3fdf1408e8b9ee0284935cfac3855e116524ca481a3f6d1b7c4e2a
 
-ARG DOC_VERSION
+ARG DOC_VERSION=10.8
 ENV DOC_VERSION ${DOC_VERSION}
 
 LABEL maintainer="ownCloud GmbH <devops@owncloud.com>" \
@@ -19,9 +19,8 @@ CMD ["/usr/bin/owncloud", "server"]
 ADD owncloud.tar.bz2 /var/www/
 ADD qnap.tar.gz /var/www/owncloud/apps/
 ADD theme-qnap.tar.gz /var/www/owncloud/apps/
-RUN rm '/var/www/owncloud/core/skeleton/ownCloud Manual.pdf'
-ADD ["https://doc.owncloud.com/pdf/server/10.8_ownCloud_Admin_Manual.pdf", "/var/www/owncloud/core/skeleton/10.8_ownCloud_Admin_Manual.pdf"]
-ADD ["https://doc.owncloud.com/pdf/server/10.8_ownCloud_User_Manual.pdf", "/var/www/owncloud/core/skeleton/10.8_ownCloud_User_Manual.pdf"]
+ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_Admin_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_Admin_Manual.pdf"]
+ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_User_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_User_Manual.pdf"]
 
 COPY ./overlay /
 WORKDIR /var/www/owncloud
