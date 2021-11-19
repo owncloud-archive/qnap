@@ -2,6 +2,20 @@ def main(ctx):
     # follow versions from here: https://github.com/owncloud-docker/server/blob/master/.drone.star
     versions = [
         {
+            "value": "10.9.0-beta1",
+            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20211118-qa.tar.bz2",
+            "tarball": "https://download.owncloud.org/community/testing/owncloud-complete-20211118.tar.bz2",
+            "tarball_sha": "4b7ab788358d1dbc96db44a6c232236e495ca5590701e6056c5ef2fac9e89a49",
+            "qnap": "https://github.com/owncloud/qnap/releases/download/v1.4.2/qnap-1.4.2.tar.gz",
+            "qnap_sha": "35818c58a3bf56ad8f0932ce9ab909e7b211eb398d67a8b722e6230e88bc214d",
+            "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0/theme-qnap.tar.gz",
+            "theme_qnap_sha": "9bdf32d23adad3eff70bbd72e37c55d5735ea3214bad04ea35f8c72a2ce6c8dc",
+            "php": "7.4",
+            "base": "v20.04",
+            "tags": [],
+            "doc_version": "10.9",
+        },
+        {
             "value": "10.8.0",
             "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20210721-qa.tar.bz2",
             "tarball": "https://download.owncloud.org/community/owncloud-complete-20210721.tar.bz2",
