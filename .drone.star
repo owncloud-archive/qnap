@@ -13,7 +13,7 @@ def main(ctx):
             "php": "7.4",
             "base": "v20.04",
             "tags": [],
-            "doc_version": "10.9",
+            "doc_version": "10.8",
         },
         {
             "value": "10.8.0",
