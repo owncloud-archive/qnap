@@ -1,4 +1,4 @@
-FROM owncloud/base:20.04-arm64v8@sha256:302f6951b62dcedaafa7035559e9322bae044ff10b52086814eabe0b652cdcb3
+FROM owncloud/base:20.04-arm64v8@sha256:ed7d8d8a6bf151c7400926abb745c2a5dbdfe8c38bf2cbd29cbb5a7808f5d58e
 
 ARG DOC_VERSION=10.8
 ENV DOC_VERSION ${DOC_VERSION}
