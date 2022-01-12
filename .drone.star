@@ -2,17 +2,17 @@ def main(ctx):
     # follow versions from here: https://github.com/owncloud-docker/server/blob/master/.drone.star
     versions = [
         {
-            "value": "10.9.0",
-            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20211220-qa.tar.bz2",
-            "tarball": "https://download.owncloud.org/community/owncloud-complete-20211220.tar.bz2",
-            "tarball_sha": "33f0f779f42bd6fcbe3ca117d65a1504a85615e1aa682fa1ebdd51f196867e82",
+            "value": "10.9.1",
+            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20220112-qa.tar.bz2",
+            "tarball": "https://download.owncloud.org/community/owncloud-complete-20220112.tar.bz2",
+            "tarball_sha": "3ab3478aee75d6aa6c47db2bc8749a108917df633f2cfab7e8ff67973c2f6147",
             "qnap": "https://github.com/owncloud/qnap/releases/download/v1.4.2/qnap-1.4.2.tar.gz",
             "qnap_sha": "35818c58a3bf56ad8f0932ce9ab909e7b211eb398d67a8b722e6230e88bc214d",
             "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0/theme-qnap.tar.gz",
             "theme_qnap_sha": "9bdf32d23adad3eff70bbd72e37c55d5735ea3214bad04ea35f8c72a2ce6c8dc",
             "php": "7.4",
             "base": "v20.04",
-            "tags": ["10.9", "10.9.0"],
+            "tags": ["10.9", "10.9.1"],
             "doc_version": "10.9",
         },
         {
