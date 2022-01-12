@@ -23,7 +23,8 @@ Custom ownCloud Docker image used within our QNAP package, please don't use this
 
 ## Docker Tags and respective Dockerfile links
 
-- [`10.8.0-beta2`](https://github.com/owncloud-docker/qnap/blob/master/v20.04/Dockerfile.amd64) available as `owncloud/qnap:10.8.0-beta2`
+- [`10.8.0`](https://github.com/owncloud-docker/qnap/blob/master/v20.04/Dockerfile.amd64) available as `owncloud/qnap:10.8.0`
+- [`10.9.1`](https://github.com/owncloud-docker/qnap/blob/master/v20.04/Dockerfile.amd64) available as `owncloud/qnap:10.9.1`
 
 ## Default volumes
 
