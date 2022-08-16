@@ -20,7 +20,7 @@ ADD owncloud.tar.bz2 /var/www/
 ADD qnap.tar.gz /var/www/owncloud/apps/
 ADD theme-qnap.tar.gz /var/www/owncloud/apps/
 ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_Admin_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_Admin_Manual.pdf"]
-ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_User_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_User_Manual.pdf"]
+#ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_User_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_User_Manual.pdf"]
 
 COPY ./overlay /
 WORKDIR /var/www/owncloud
