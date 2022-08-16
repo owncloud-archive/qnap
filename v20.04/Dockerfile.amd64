@@ -1,6 +1,6 @@
 FROM owncloud/base:20.04-amd64@sha256:98d3a3f250cb977e27fab22ee49449fbd0e73a7f9a37f5dacefef1ec4afb34fc
 
-ARG DOC_VERSION=10.8
+ARG DOC_VERSION=10.10
 ENV DOC_VERSION ${DOC_VERSION}
 
 LABEL maintainer="ownCloud GmbH <devops@owncloud.com>" \

@@ -2,32 +2,18 @@ def main(ctx):
     # follow versions from here: https://github.com/owncloud-docker/server/blob/master/.drone.star
     versions = [
         {
-            "value": "10.9.1",
-            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20220112-qa.tar.bz2",
-            "tarball": "https://download.owncloud.org/community/owncloud-complete-20220112.tar.bz2",
-            "tarball_sha": "3ab3478aee75d6aa6c47db2bc8749a108917df633f2cfab7e8ff67973c2f6147",
+            "value": "10.10.0",
+            "qa": "https://download.owncloud.com/server/testing/owncloud-complete-20220518-qa.tar.bz2",
+            "tarball": "https://download.owncloud.com/server/stable/owncloud-complete-20220518.tar.bz2",
+            "tarball_sha": "a6c811cfe87908e18178d69ef128993a721b0a78de6a5f8943e970bb5d201f39",
             "qnap": "https://github.com/owncloud/qnap/releases/download/v1.4.2/qnap-1.4.2.tar.gz",
             "qnap_sha": "35818c58a3bf56ad8f0932ce9ab909e7b211eb398d67a8b722e6230e88bc214d",
             "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0/theme-qnap.tar.gz",
             "theme_qnap_sha": "9bdf32d23adad3eff70bbd72e37c55d5735ea3214bad04ea35f8c72a2ce6c8dc",
             "php": "7.4",
             "base": "v20.04",
-            "tags": ["10.9", "10.9.1"],
-            "doc_version": "10.9",
-        },
-        {
-            "value": "10.8.0",
-            "qa": "https://download.owncloud.org/community/testing/owncloud-complete-20210721-qa.tar.bz2",
-            "tarball": "https://download.owncloud.org/community/owncloud-complete-20210721.tar.bz2",
-            "tarball_sha": "c98afec32d2047be12a7a2724ef27a61ef42dc7175fcf8368813ff39d22d55d8",
-            "qnap": "https://github.com/owncloud/qnap/releases/download/v1.4.2/qnap-1.4.2.tar.gz",
-            "qnap_sha": "35818c58a3bf56ad8f0932ce9ab909e7b211eb398d67a8b722e6230e88bc214d",
-            "theme_qnap": "https://github.com/owncloud/theme-qnap/releases/download/v0.1.0/theme-qnap.tar.gz",
-            "theme_qnap_sha": "9bdf32d23adad3eff70bbd72e37c55d5735ea3214bad04ea35f8c72a2ce6c8dc",
-            "php": "7.4",
-            "base": "v20.04",
-            "tags": ["10.8", "10.8.0"],
-            "doc_version": "10.8",
+            "tags": ["10.10.0", "10.10", "10"],
+            "doc_version": "10.10",
         },
     ]
 
