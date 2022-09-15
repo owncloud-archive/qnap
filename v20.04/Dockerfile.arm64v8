@@ -22,7 +22,7 @@ ADD theme-qnap.tar.gz /var/www/owncloud/apps/
 #ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_Admin_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_Admin_Manual.pdf"]
 #ADD ["https://doc.owncloud.com/pdf/server/${DOC_VERSION}_ownCloud_User_Manual.pdf", "/var/www/owncloud/skeleton/${DOC_VERSION}_ownCloud_User_Manual.pdf"]
 
-COPY ./overlay /
+ADD overlay /
 WORKDIR /var/www/owncloud
 
 RUN find /var/www/owncloud \( \! -user www-data -o \! -group root \) -print0 | xargs -r -0 chown www-data:root && \
