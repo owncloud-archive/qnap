@@ -537,7 +537,7 @@ def prepublish(config):
 def sleep(config):
     return [{
         "name": "sleep",
-        "image": "owncloudci/alpine:latest",
+        "image": "owncloudci/alpine",
         "environment": {
             "DOCKER_USER": {
                 "from_secret": "internal_username",
@@ -547,7 +547,8 @@ def sleep(config):
             },
         },
         "commands": [
-            "retry -- 'reg digest --username $DOCKER_USER --password $DOCKER_PASSWORD registry.drone.owncloud.com/owncloud/%s:%s'" % (config["repo"], config["internal"]),
+            "regctl registry login registry.drone.owncloud.com --user $DOCKER_USER --pass $DOCKER_PASSWORD",
+            "retry -- 'regctl image digest registry.drone.owncloud.com/owncloud/%s:%s'" % (config["repo"], config["internal"]),
         ],
     }]
 
@@ -773,7 +774,7 @@ def publish(config):
 def cleanup(config):
     return [{
         "name": "cleanup",
-        "image": "owncloudci/alpine:latest",
+        "image": "owncloudci/alpine",
         "failure": "ignore",
         "environment": {
             "DOCKER_USER": {
@@ -784,7 +785,8 @@ def cleanup(config):
             },
         },
         "commands": [
-            "reg rm --username $DOCKER_USER --password $DOCKER_PASSWORD registry.drone.owncloud.com/owncloud/%s:%s" % (config["repo"], config["internal"]),
+            "regctl registry login registry.drone.owncloud.com --user $DOCKER_USER --pass $DOCKER_PASSWORD",
+            "regctl tag rm registry.drone.owncloud.com/owncloud/%s:%s" % (config["repo"], config["internal"]),
         ],
     }]
 
