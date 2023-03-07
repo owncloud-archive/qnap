@@ -16,7 +16,7 @@ Custom ownCloud Docker image used within our QNAP package, please don't use this
   [owncloud-docker/qnap](https://github.com/owncloud-docker/qnap/issues)
 
 - **Supported architectures:**\
-  `amd64`, `arm32v7`, `arm64v8`
+  `amd64`, `arm64v8`
 
 - **Inherited environments:**\
   [owncloud/ubuntu](https://github.com/owncloud-docker/ubuntu#environment-variables),
